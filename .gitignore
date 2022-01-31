@@ -1,5 +1,6 @@
 data/meebits/images/*
 ml-runs/*
+*.png
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

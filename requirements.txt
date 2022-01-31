@@ -6,4 +6,4 @@ tqdm==4.62.3
 pytorch-lightning==1.4.2
 mlflow==1.23.1
 scikit-learn==1.0.2
-piqa==1.1.8
+#piqa==1.1.8

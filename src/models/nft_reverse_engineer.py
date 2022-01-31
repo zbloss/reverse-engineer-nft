@@ -6,8 +6,8 @@ import torch.nn.functional as F
 import torchvision
 import pytorch_lightning as pl
 from piqa import PSNR, SSIM
-from piqa.utils import set_debug
-set_debug(False)
+#from piqa.utils import set_debug
+#set_debug(False)
 
 class SSIMLoss(SSIM):
     def forward(self, x, y):
@@ -22,6 +22,7 @@ class NFTReverseEngineer(pl.LightningModule):
         super().__init__()
         self.learning_rate = learning_rate
         self.target_loss = target_loss
+        self.batch_size = None
         
         self.mse_loss = nn.MSELoss()
         self.psnr_loss= PSNRLoss()
