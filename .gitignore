@@ -1,7 +1,7 @@
 data/meebits/images/*
 ml-runs/*
 *.png
-
+models/*.ckpt
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

@@ -6,8 +6,13 @@ import pandas as pd
 from PIL import Image
 from tqdm import tqdm
 
-from utils.utils import (build_dataframe, download_image, encode_dataframes,
-                         extract_metadata, get_meebit_image_url)
+from utils.utils import (
+    build_dataframe,
+    download_image,
+    encode_dataframes,
+    extract_metadata,
+    get_meebit_image_url,
+)
 
 
 @click.command()
@@ -61,7 +66,7 @@ def make_dataset(path_to_metadata: str, path_to_store_data: str):
                 flattened_dataframes.append(build_dataframe(meebit_metadata))
         except:
             pass
-        
+
     csv_metadata = encode_dataframes(
         flattened_dataframes,
         columns_to_exclude=[
